@@ -1,0 +1,280 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINOR PROJECT</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" text="text/css" href="css.css">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<body>
+  
+    <div class="dropdown">
+        <nav >
+            <img class="logo" src="http://cdgi.edu.in/PHP/images/agrawal_group.png" alt="">
+            <a href="search.html"><input type="seach" name="search" placeholder="search here"></a>
+            <ul>
+                
+                <li><a href="dj.html"><i class="fa fa-home" aria-hidden="true"></i>home</a></li>
+                <li><a href="services.html"><i class="fa fa-cogs" aria-hidden="true"></i>
+                    services <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <ul id="dj"> 
+                  <li><a href="gatepass.html">GatePass</a></li>
+                  <li><a href="fees.html">fees</a></li>
+                  <li><a href="yourprofile.html">other</a>
+                  <ul>
+                    </li>
+                  <li><a href="https://cdgi.edu.in/cdgi.php.html" target="_blank">collagevisit</a></li>
+                  <li><a href="http://54.71.212.254/ecampus/login">ecampusvisit</a></li>
+                   </ul>
+                </ul>
+            </li>
+             <li><a href="hostel.html"><i class="fa fa-hospital" aria-hidden="true"></i>hostel <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="registrationfrom.html">registrationform</a></li>
+                  <li><a href="facilities.html">facilities</a></li>
+                  <li><a href="activities.html">activities</a></li>
+                   <li><a href="conplainform.html">complainform</a></li>
+
+
+
+                </ul>
+
+
+
+             </li>
+             <li><a href="about.html"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                about</a></li>
+             <li><a href="feedback.html"><i class="fa fa-comment" aria-hidden="true"></i>
+                feedback</a></li>
+             <li><a href="contact.html">contact us <i class="fa fa-phone-square" aria-hidden="true"></i> </a></li>
+             
+            </ul>
+        </nav>
+
+
+    </div>
+    <div class="wrapper">
+        <div class="static-text">nice=</div>
+        <ul class="dynamic-text">
+            <li><span>hostel</span></li>
+            <li><span>facilities</span></li>
+            <li><span>activities</span></li>
+            <li><span>bed</span></li>
+            <li><span>room</span></li>
+
+        </ul>
+    </div>
+    <h1 data-text="WELCOME STUDENT TO CHAMELI DEVI HOSTEL........."></h1>
+    <body onload="initClock()">
+
+        <!--digital clock start-->
+        <div class="datetime">
+          <div class="date">
+            <span id="dayname">Day</span>,
+            <span id="month">Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+          </div>
+          <div class="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>
+          </div>
+        </div>
+        <!--digital clock end-->
+    
+        <script type="text/javascript">
+        function updateClock(){
+          var now = new Date();
+          var dname = now.getDay(),
+              mo = now.getMonth(),
+              dnum = now.getDate(),
+              yr = now.getFullYear(),
+              hou = now.getHours(),
+              min = now.getMinutes(),
+              sec = now.getSeconds(),
+              pe = "AM";
+    
+              if(hou >= 12){
+                pe = "PM";
+              }
+              if(hou == 0){
+                hou = 12;
+              }
+              if(hou > 12){
+                hou = hou - 12;
+              }
+    
+              Number.prototype.pad = function(digits){
+                for(var n = this.toString(); n.length < digits; n = 0 + n);
+                return n;
+              }
+    
+              var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+              var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+              var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+              var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+              for(var i = 0; i < ids.length; i++)
+              document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+        }
+    
+        function initClock(){
+          updateClock();
+          window.setInterval("updateClock()", 1);
+        }
+        </script>
+    
+      </body>
+      <body>
+
+        <!--image slider start-->
+        <div class="slider">
+          <div class="slides">
+            <!--radio buttons start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!--radio buttons end-->
+            <!--slide images start-->
+            <div class="slide first">
+              <img src="girl full.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="girlnichehd.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="girlroombaharhd.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="roomhd.jpg" alt="">
+            </div>
+            <!--slide images end-->
+            <!--automatic navigation start-->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+            <!--automatic navigation end-->
+          </div>
+          <!--manual navigation start-->
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+          </div>
+          <!--manual navigation end-->
+        </div>
+        <!--image slider end-->
+    
+        <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+          document.getElementById('radio' + counter).checked = true;
+          counter++;
+          if(counter > 4){
+            counter = 1;
+          }
+        }, 5000);
+        </script>     
+        <div class="container">
+          <div class="ticker">
+            <div class="tittle"><h5>breaking news<i class="fa fa-fast-forward" aria-hidden="true"></i></div>
+            <div class="news">
+            <marquee>
+              <p>THANK YOU FALKE SIR Who Allowed me to Make Website Thank You to All Faculty This WEBSITE is specially for students, all facilities are available in hostel And nice facilities,activities,bed,room.i hope you like the website! THANK YOU SIR
+            </marquee>
+            </div>
+            <div>
+
+
+            </div>
+          </div>
+        </div>
+    
+      </body>
+      
+
+    <div class="container2">
+      <div class="box">
+        <div class="icon">girl hostel </div>
+        <div class="content">
+          <h3>ABOUT HOSTEL</h3>
+          <p>Welcome to CHAMELI DEVI  Boys And girls Hostel This hostel has very good facilities and activities are also very good Bed room and food is very good thank.
+          <a href="#">read</a>
+        </div>
+      </div>
+    </div>
+    <div class="rajac">
+      <div class="ranib">
+        <div class="ic">Gallery boy hostel </div>
+        <div class="con">
+        </div>
+      </div>
+    </div>
+    <div class="hostel">
+      <div><img src="junior hostelhd.jpg" alt=""></div>
+      <div><img src="senior hostelhd.jpg" alt=""></div>
+      <div><img src="swiming poolhd.jpg" alt=""></div>
+      <div><img src="playground imageshd.jpg" alt=""></div>
+    </div>
+   
+    <!--form area start-->
+    <div class="form">
+      <!--login form start-->
+      <form class="login-form" action="" method="post">
+        <i class="fas fa-user-circle"></i>
+        <input class="user-input" type="text" name="" placeholder="Username" required>
+        <input class="user-input" type="password" name="" placeholder="Password" required>
+        <div class="options-01">
+          <label class="remember-me"><input type="checkbox" name="">Remember me</label>
+          <a href="#">Forgot your password?</a>
+        </div>
+        <input class="btn" type="submit" name="" value="LOGIN">
+        <div class="options-02">
+          <p>Not Registered? <a href="#">Create an Account</a></p>
+        </div>
+      </form>
+      <!--login form end-->
+      <!--signup form start-->
+      <form class="signup-form" action="" method="post">
+        <i class="fas fa-user-plus"></i>
+        <input class="user-input" type="text" name="" placeholder="Username" required>
+        <input class="user-input" type="email" name="" placeholder="Email Address" required>
+        <input class="user-input" type="password" name="" placeholder="Password" required>
+        <input class="btn" type="submit" name="" value="SIGN UP">
+        <div class="options-02">
+          <p>Already Registered? <a href="#">Sign In</a></p>
+        </div>
+      </form>
+      <!--signup form end-->
+    </div>
+    <!--form area end-->
+
+    <script type="text/javascript">
+    $('.options-02 a').click(function(){
+      $('form').animate({
+        height: "toggle", opacity: "toggle"
+      }, "slow");
+
+    });
+    </script>
+    
+    
+    
+    </head>
+</html>
